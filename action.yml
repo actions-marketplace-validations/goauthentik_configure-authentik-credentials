@@ -14,11 +14,14 @@ inputs:
   client_id:
     description: "Client ID of the application authorize to"
     required: true
+  scope:
+    description: "OAuth scopes to request, space separated list"
+    required: false
 
 outputs:
   token:
     description: "JWT token"
 
 runs:
-  using: node20
+  using: node24
   main: dist/index.js
